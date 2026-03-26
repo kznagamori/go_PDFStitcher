@@ -17,13 +17,13 @@ func almostEqual(a, b float64) bool {
 
 func TestCalculateLayout(t *testing.T) {
 	tests := []struct {
-		name         string
-		pages        []model.Page
-		gapPt        float64
-		wantHeight   float64
-		wantWidth    float64
-		wantOffsets  []float64
-		wantExceeds  bool
+		name        string
+		pages       []model.Page
+		gapPt       float64
+		wantHeight  float64
+		wantWidth   float64
+		wantOffsets []float64
+		wantExceeds bool
 	}{
 		{
 			name: "1ページ・ガターなし",
@@ -65,9 +65,9 @@ func TestCalculateLayout(t *testing.T) {
 		{
 			name: "異なるページサイズ",
 			pages: []model.Page{
-				{Index: 0, Width: 595, Height: 842},  // A4
-				{Index: 1, Width: 842, Height: 595},  // A4横
-				{Index: 2, Width: 420, Height: 595},   // A5
+				{Index: 0, Width: 595, Height: 842}, // A4
+				{Index: 1, Width: 842, Height: 595}, // A4横
+				{Index: 2, Width: 420, Height: 595}, // A5
 			},
 			gapPt:       0,
 			wantHeight:  2032,
